@@ -52,10 +52,36 @@
                         data.current.container.remove();
                     }
 
-                    // Scroll reset
-                    window.scrollTo(0, 0);
-                    if (DS.lenis) {
-                        DS.lenis.scrollTo(0, { immediate: true });
+                    // Barba strips the hash from pushState, so extract it
+                    // from the clicked link before it's lost
+                    var targetHash = '';
+                    if (data.trigger && data.trigger.getAttribute) {
+                        var href = data.trigger.getAttribute('href') || '';
+                        var hashIdx = href.indexOf('#');
+                        if (hashIdx >= 0) targetHash = href.slice(hashIdx);
+                    }
+                    if (!targetHash) targetHash = window.location.hash;
+
+                    // Scroll to hash target or top
+                    var hashTarget = targetHash ? data.next.container.querySelector(targetHash) : null;
+                    if (hashTarget) {
+                        // Temporarily make container visible to measure position
+                        gsap.set(data.next.container, { opacity: 1, y: 0 });
+                        var header = document.querySelector('.site-header');
+                        var offset = header ? header.offsetHeight + 24 : 0;
+                        var top = hashTarget.getBoundingClientRect().top + window.pageYOffset - offset;
+                        window.scrollTo(0, top);
+                        if (DS.lenis) DS.lenis.scrollTo(top, { immediate: true });
+                        // Restore initial state for animation
+                        gsap.set(data.next.container, { opacity: 0, y: 30 });
+                    } else {
+                        window.scrollTo(0, 0);
+                        if (DS.lenis) DS.lenis.scrollTo(0, { immediate: true });
+                    }
+
+                    // Restore hash in URL (Barba strips it from pushState)
+                    if (targetHash && window.location.hash !== targetHash) {
+                        history.replaceState(null, '', window.location.pathname + targetHash);
                     }
 
                     return gsap.fromTo(data.next.container,
@@ -80,10 +106,6 @@
                                 // Refresh AFTER new ScrollTrigger instances are created
                                 if (typeof ScrollTrigger !== 'undefined' && typeof ScrollTrigger.refresh === 'function') {
                                     ScrollTrigger.refresh();
-                                }
-
-                                if (DS.scrollToHash && window.location.hash) {
-                                    DS.scrollToHash(window.location.hash, true);
                                 }
                             }
                         }
