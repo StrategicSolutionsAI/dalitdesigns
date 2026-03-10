@@ -22,16 +22,24 @@ var DalitSite = window.DalitSite || {};
             smoothWheel: true
         });
 
-        // Connect Lenis to GSAP ticker
-        function raf(time) {
-            lenis.raf(time);
+        // Connect Lenis to GSAP ticker for frame-synced scrolling
+        if (typeof gsap !== 'undefined' && gsap.ticker) {
+            lenis.on('scroll', function () {
+                if (typeof ScrollTrigger !== 'undefined' && typeof ScrollTrigger.update === 'function') {
+                    ScrollTrigger.update();
+                }
+            });
+            gsap.ticker.add(function (time) {
+                lenis.raf(time * 1000);
+            });
+            gsap.ticker.lagSmoothing(0);
+        } else {
+            // Fallback: standalone RAF loop
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
             requestAnimationFrame(raf);
-        }
-        requestAnimationFrame(raf);
-
-        // Connect ScrollTrigger to Lenis
-        if (typeof ScrollTrigger !== 'undefined' && typeof ScrollTrigger.update === 'function') {
-            lenis.on('scroll', ScrollTrigger.update);
         }
 
         DS.lenis = lenis;
@@ -247,10 +255,16 @@ var DalitSite = window.DalitSite || {};
     }
 
     /* ── Portrait gradient follow ── */
+    var _portraitResizeHandler = null;
     function initPortraitGradient() {
         var container = document.getElementById('dalit-hero-image');
         var gradient = document.getElementById('dalit-hero-gradient');
         if (!container || !gradient) return;
+
+        // Remove previous resize listener to prevent accumulation on Barba nav
+        if (_portraitResizeHandler) {
+            window.removeEventListener('resize', _portraitResizeHandler);
+        }
 
         var center = function () {
             var r = container.getBoundingClientRect();
@@ -265,6 +279,7 @@ var DalitSite = window.DalitSite || {};
             });
             container.addEventListener('mouseleave', center);
         }
+        _portraitResizeHandler = center;
         window.addEventListener('resize', center);
     }
 
@@ -302,25 +317,29 @@ var DalitSite = window.DalitSite || {};
         var arrivedFromInternalNavigation = sessionStorage.getItem(internalNavigationKey) === '1';
         sessionStorage.removeItem(internalNavigationKey);
 
+        // Init modules early — preloader covers content so setup is invisible
+        initModules();
+
         if (!isHomePage()) {
             removePreloader();
-            initModules();
             return;
         }
 
         if (!arrivedFromInternalNavigation) {
             runPreloader(function () {
-                initModules();
+                if (typeof ScrollTrigger !== 'undefined' && typeof ScrollTrigger.refresh === 'function') {
+                    ScrollTrigger.refresh();
+                }
             });
             return;
         }
 
         removePreloader();
-        initModules();
     }
 
     // Expose
     DS.reducedMotion = reducedMotion;
+    DS.internalNavigationKey = internalNavigationKey;
     DS.boot = boot;
     DS.initModules = initModules;
     DS.scrollToHash = scrollToHash;

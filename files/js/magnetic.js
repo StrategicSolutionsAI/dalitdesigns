@@ -9,6 +9,7 @@
 
     function init() {
         if (DS.reducedMotion) return;
+        if (typeof gsap === 'undefined') return;
         if (!window.matchMedia('(pointer: fine)').matches) return;
 
         var selectors = '.hero-cta, .nav-cta, .pill, .nav-pill, .button-primary';

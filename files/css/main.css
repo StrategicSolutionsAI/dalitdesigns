@@ -1,10 +1,8 @@
 /* ─── Font Faces ─── */
 @font-face { font-family: "Whitney Book"; src: url("../fonts/whitney-book.woff") format("woff"); font-display: swap; }
 @font-face { font-family: "Whitney Medium"; src: url("../fonts/whitney-medium.woff") format("woff"); font-display: swap; }
-@font-face { font-family: "Whitney Bold"; src: url("../fonts/whitney-bold.woff") format("woff"); font-display: swap; }
 @font-face { font-family: "Whitney Light"; src: url("../fonts/whitney-light.woff") format("woff"); font-display: swap; }
 @font-face { font-family: "Reckless"; src: url("../fonts/RecklessTRIAL-Light.otf") format("opentype"); font-weight: 300; font-display: swap; }
-@font-face { font-family: "Reckless"; src: url("../fonts/RecklessTRIAL-Regular.otf") format("opentype"); font-weight: 400; font-display: swap; }
 
 /* ─── Tokens ─── */
 :root {
@@ -710,12 +708,9 @@ a:hover .view-arrow { gap: 11px; }
 
 /* ─── Reveal Animations ─── */
 .motion-ready [data-reveal] {
-    opacity: 0; transform: translateY(22px);
-    transition: opacity 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                transform 800ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transition-delay: var(--delay, 0ms);
+    opacity: 0;
 }
-.motion-ready [data-reveal].is-visible { opacity: 1; transform: translateY(0); }
+.motion-ready [data-reveal].is-visible { opacity: 1; transform: none; }
 
 /* ─── Splitting.js + Text Reveal ─── */
 .char {
@@ -724,7 +719,6 @@ a:hover .view-arrow { gap: 11px; }
 }
 .motion-ready [data-split] .char {
     opacity: 0;
-    transform: translateY(80px) rotateX(-40deg);
 }
 
 /* ─── Preloader (dark — first visit) ─── */
@@ -1010,3 +1004,845 @@ a:hover .view-arrow { gap: 11px; }
     .preloader { display: none !important; }
     .hero-blob-canvas { display: none !important; }
 }
+
+/* ─── About Page ─── */
+
+.about-hero {
+    position: relative;
+    padding: 72px 0 92px;
+}
+.about-hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+}
+.about-hero-copy {
+    display: grid;
+    gap: 0;
+    align-content: start;
+}
+.about-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 24px;
+    font-family: "Whitney Medium", sans-serif;
+    font-size: var(--text-sm);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--faint);
+}
+.about-label::before {
+    content: "";
+    width: 32px;
+    height: 2px;
+    background: var(--accent);
+}
+.about-hero h1 {
+    margin: 0;
+    font-family: "Reckless", Georgia, serif;
+    font-weight: 300;
+    font-size: clamp(2.8rem, 5.2vw, 4.4rem);
+    line-height: 1.06;
+    letter-spacing: -0.025em;
+    max-width: 18ch;
+}
+.about-hero-desc {
+    margin: 24px 0 0;
+    font-family: "Whitney Light", sans-serif;
+    font-size: clamp(1.08rem, 1.35vw, 1.28rem);
+    line-height: 1.6;
+    color: var(--muted);
+    max-width: 38ch;
+}
+.about-hero-portrait {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.about-portrait-frame {
+    position: relative;
+    overflow: hidden;
+    border-radius: 28px;
+    max-width: 520px;
+    width: 100%;
+    box-shadow: var(--shadow);
+}
+.about-portrait-frame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg,
+            rgba(255,255,255,0.06) 0%,
+            rgba(255,255,255,0) 18%,
+            rgba(255,255,255,0) 82%,
+            rgba(255,255,255,0.06) 100%
+        );
+    pointer-events: none;
+}
+.about-portrait-frame img {
+    width: 100%;
+    aspect-ratio: 0.88;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+}
+.about-philosophy {
+    padding: 0 0 80px;
+}
+.philosophy-layout {
+    position: relative;
+    padding: 48px 56px;
+    border-radius: 28px;
+    background: linear-gradient(160deg, #101722 0%, #182638 100%);
+    overflow: hidden;
+}
+.philosophy-layout::before {
+    content: "";
+    position: absolute;
+    top: -80px;
+    right: -60px;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(99, 181, 197, 0.22), transparent 70%);
+    filter: blur(20px);
+    opacity: 0.75;
+}
+.philosophy-accent {
+    width: 40px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.6);
+    margin-bottom: 28px;
+}
+.philosophy-quote {
+    margin: 0;
+    padding: 0;
+}
+.philosophy-quote p {
+    margin: 0;
+    font-family: "Reckless", Georgia, serif;
+    font-weight: 300;
+    font-size: clamp(1.4rem, 2.6vw, 2rem);
+    line-height: 1.42;
+    letter-spacing: -0.01em;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 52ch;
+}
+.philosophy-quote em {
+    font-style: italic;
+    color: var(--accent);
+}
+.section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 24px;
+    font-family: "Whitney Medium", sans-serif;
+    font-size: var(--text-sm);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--faint);
+}
+.label-line {
+    display: inline-block;
+    width: 32px;
+    height: 2px;
+    background: var(--accent);
+}
+.about-bio {
+    position: relative;
+    padding: 100px 0;
+    background:
+        radial-gradient(circle at 0% 0%, rgba(99, 181, 197, 0.07), transparent 20%),
+        linear-gradient(180deg, rgba(244, 248, 252, 0.88) 0%, rgba(255, 255, 255, 0.98) 100%);
+}
+.bio-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 64px;
+    align-items: start;
+}
+.bio-content h2 {
+    margin: 0;
+    font-family: "Reckless", Georgia, serif;
+    font-weight: 300;
+    font-size: clamp(2.4rem, 4.2vw, 3.6rem);
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    max-width: 18ch;
+}
+.bio-text {
+    margin-top: 32px;
+    display: grid;
+    gap: 20px;
+}
+.bio-text p {
+    margin: 0;
+    font-family: "Whitney Light", sans-serif;
+    font-size: var(--text-lg);
+    line-height: 1.7;
+    color: var(--muted);
+    max-width: 52ch;
+}
+.bio-image-frame {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    box-shadow: var(--shadow-soft);
+}
+.bio-image-frame img {
+    width: 100%;
+    aspect-ratio: 0.8;
+    object-fit: cover;
+    display: block;
+}
+.about-experience {
+    padding: 100px 0 116px;
+}
+.experience-title {
+    margin: 0;
+    font-family: "Reckless", Georgia, serif;
+    font-weight: 300;
+    font-size: clamp(2.4rem, 4.2vw, 3.6rem);
+    line-height: 1.06;
+    letter-spacing: -0.025em;
+    max-width: 20ch;
+}
+.experience-intro {
+    margin: 24px 0 0;
+    font-family: "Whitney Light", sans-serif;
+    font-size: var(--text-lg);
+    line-height: 1.62;
+    color: var(--muted);
+    max-width: 48ch;
+}
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 56px;
+}
+.experience-card {
+    padding: 32px 28px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+    border: 1px solid rgba(20, 25, 34, 0.08);
+    transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease;
+}
+.experience-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(29, 63, 88, 0.16);
+    box-shadow: var(--shadow-soft);
+}
+.experience-card-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: var(--accent-subtle);
+    color: var(--accent-deep);
+    margin-bottom: 20px;
+}
+.experience-card h3 {
+    margin: 0 0 12px;
+    font-family: "Reckless", Georgia, serif;
+    font-weight: 300;
+    font-size: clamp(1.4rem, 2vw, 1.7rem);
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+}
+.experience-card p {
+    margin: 0;
+    font-size: var(--text-base);
+    line-height: 1.6;
+    color: var(--muted);
+    max-width: 38ch;
+}
+.about-tools {
+    padding: 100px 0;
+    background:
+        radial-gradient(circle at 100% 0%, rgba(99, 181, 197, 0.06), transparent 18%),
+        linear-gradient(180deg, rgba(244, 248, 252, 0.88) 0%, rgba(255, 255, 255, 0.98) 100%);
+}
+.tools-layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 64px;
+    align-items: start;
+}
+.tools-copy h2 {
+    margin: 0;
+    font-family: "Reckless", Georgia, serif;
+    font-weight: 300;
+    font-size: clamp(2.4rem, 4.2vw, 3.6rem);
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+}
+.tools-desc {
+    margin: 24px 0 0;
+    font-family: "Whitney Light", sans-serif;
+    font-size: var(--text-lg);
+    line-height: 1.62;
+    color: var(--muted);
+    max-width: 32ch;
+}
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+.tool-group-label {
+    margin: 0 0 16px;
+    font-family: "Whitney Medium", sans-serif;
+    font-size: var(--text-xs);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--faint);
+}
+.tool-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+}
+.tool-list li {
+    font-family: "Whitney Book", sans-serif;
+    font-size: var(--text-base);
+    line-height: 1.5;
+    color: var(--muted);
+    padding-left: 16px;
+    position: relative;
+}
+.tool-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.65em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.6;
+}
+.about-values {
+    padding: 100px 0 116px;
+}
+.values-title {
+    margin: 0;
+    font-family: "Reckless", Georgia, serif;
+    font-weight: 300;
+    font-size: clamp(2.4rem, 4.2vw, 3.6rem);
+    line-height: 1.06;
+    letter-spacing: -0.025em;
+    max-width: 20ch;
+}
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 56px;
+}
+.value-card {
+    position: relative;
+    padding: 36px 28px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+    border: 1px solid rgba(20, 25, 34, 0.08);
+    transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease;
+}
+.value-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(29, 63, 88, 0.16);
+    box-shadow: var(--shadow-soft);
+}
+.value-number {
+    display: block;
+    font-family: "Reckless", Georgia, serif;
+    font-weight: 300;
+    font-size: clamp(2.4rem, 3vw, 3rem);
+    letter-spacing: -0.03em;
+    color: var(--accent);
+    opacity: 0.35;
+    margin-bottom: 16px;
+    line-height: 1;
+}
+.value-card h3 {
+    margin: 0 0 14px;
+    font-family: "Reckless", Georgia, serif;
+    font-weight: 300;
+    font-size: clamp(1.4rem, 2vw, 1.7rem);
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+}
+.value-card p {
+    margin: 0;
+    font-size: var(--text-base);
+    line-height: 1.6;
+    color: var(--muted);
+}
+.about-personal {
+    padding: 100px 0;
+    background:
+        radial-gradient(circle at 0% 100%, rgba(99, 181, 197, 0.06), transparent 20%),
+        linear-gradient(180deg, rgba(244, 248, 252, 0.88) 0%, rgba(255, 255, 255, 0.98) 100%);
+}
+.personal-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 64px;
+    align-items: center;
+}
+.personal-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+.personal-image-frame {
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
+}
+.personal-image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.personal-image-frame--tall {
+    grid-row: span 2;
+}
+.personal-image-frame--tall img {
+    aspect-ratio: 0.75;
+}
+.personal-image-frame--wide img {
+    aspect-ratio: 1.33;
+}
+.personal-copy h2 {
+    margin: 0;
+    font-family: "Reckless", Georgia, serif;
+    font-weight: 300;
+    font-size: clamp(2.4rem, 4.2vw, 3.6rem);
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+}
+.personal-copy p {
+    margin: 20px 0 0;
+    font-family: "Whitney Light", sans-serif;
+    font-size: var(--text-lg);
+    line-height: 1.7;
+    color: var(--muted);
+    max-width: 42ch;
+}
+.site-nav a[aria-current="page"] {
+    color: var(--text);
+}
+.site-nav a[aria-current="page"]::after {
+    transform: scaleX(1);
+}
+
+/* About – Tablet */
+@media (max-width: 1024px) {
+    .about-hero { padding: 40px 0 60px; }
+    .about-hero-grid { grid-template-columns: 1fr; gap: 36px; }
+    .about-hero h1 { max-width: none; }
+    .about-hero-desc { max-width: none; }
+    .about-hero-portrait { justify-content: flex-start; }
+    .about-portrait-frame { max-width: 480px; }
+    .philosophy-layout { padding: 36px 32px; }
+    .bio-grid { grid-template-columns: 1fr; gap: 40px; }
+    .bio-content h2 { max-width: none; }
+    .experience-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    .tools-layout { grid-template-columns: 1fr; gap: 40px; }
+    .tools-desc { max-width: none; }
+    .values-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .personal-grid { grid-template-columns: 1fr; gap: 40px; }
+    .personal-images { max-width: 480px; }
+}
+
+/* About – Mobile */
+@media (max-width: 760px) {
+    .about-hero { padding: 24px 0 40px; }
+    .about-hero h1 { font-size: clamp(2.2rem, 9vw, 3rem); }
+    .about-hero-desc { font-size: var(--text-md); margin-top: 14px; }
+    .about-label { font-size: 0.72rem; margin-bottom: 14px; }
+    .about-portrait-frame { border-radius: 20px; max-width: none; }
+    .about-portrait-frame img { aspect-ratio: 1.1; object-position: center 20%; }
+    .about-philosophy { padding: 0 0 48px; }
+    .philosophy-layout { padding: 28px 20px; border-radius: 20px; }
+    .philosophy-quote p { font-size: clamp(1.15rem, 4vw, 1.4rem); }
+    .philosophy-accent { margin-bottom: 18px; }
+    .about-bio { padding: 56px 0; }
+    .bio-grid { gap: 32px; }
+    .bio-text { margin-top: 20px; gap: 16px; }
+    .bio-text p { font-size: var(--text-base); }
+    .bio-image-frame { border-radius: 18px; }
+    .about-experience { padding: 56px 0 64px; }
+    .experience-grid { grid-template-columns: 1fr; gap: 16px; margin-top: 36px; }
+    .experience-card { padding: 24px 20px; border-radius: 20px; }
+    .experience-card-icon { width: 40px; height: 40px; border-radius: 12px; margin-bottom: 16px; }
+    .experience-card h3 { font-size: 1.3rem; }
+    .experience-intro { margin-top: 16px; font-size: var(--text-base); }
+    .about-tools { padding: 56px 0; }
+    .tools-grid { grid-template-columns: 1fr 1fr; gap: 28px 20px; }
+    .tools-desc { font-size: var(--text-base); }
+    .about-values { padding: 56px 0 64px; }
+    .values-grid { grid-template-columns: 1fr; gap: 16px; margin-top: 36px; }
+    .value-card { padding: 28px 20px; border-radius: 20px; }
+    .value-number { font-size: 2rem; margin-bottom: 10px; }
+    .about-personal { padding: 56px 0; }
+    .personal-images { gap: 12px; }
+    .personal-image-frame { border-radius: 16px; }
+    .personal-copy p { font-size: var(--text-base); }
+    .section-label { font-size: 0.72rem; margin-bottom: 14px; }
+    .label-line { width: 24px; }
+}
+
+/* About – Touch Devices */
+@media (hover: none) {
+    .experience-card:hover { transform: none; box-shadow: none; }
+    .value-card:hover { transform: none; box-shadow: none; }
+}
+
+/* ─── Case Study v2 — Editorial Magazine Layout ─── */
+
+.cs-hero-v2 {
+    position: relative;
+    height: 92vh;
+    min-height: 540px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+.cs-hero-v2__media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+.cs-hero-v2__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.cs-hero-v2__scrim {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(20,25,34,0.12) 0%, rgba(20,25,34,0.68) 100%);
+}
+.cs-hero-v2__copy {
+    position: relative;
+    z-index: 2;
+    width: var(--site-width);
+    margin: 0 auto;
+    padding: 0 0 72px;
+}
+.cs-hero-v2__kicker {
+    display: block;
+    margin: 0 0 20px;
+    font-family: "Whitney Medium", sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,251,247,0.65);
+}
+.cs-hero-v2__title {
+    margin: 0;
+    font-family: "Reckless", Georgia, serif;
+    font-weight: 300;
+    font-size: clamp(3.8rem, 8vw, 7.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    color: #fffbf7;
+}
+.cs-hero-v2__desc {
+    margin: 24px 0 0;
+    font-family: "Whitney Light", sans-serif;
+    font-size: clamp(1.08rem, 1.35vw, 1.28rem);
+    line-height: 1.72;
+    color: rgba(255,251,247,0.78);
+    max-width: 42ch;
+}
+.cs-details {
+    padding: 40px 0;
+    border-bottom: 1px solid var(--line);
+}
+.cs-details dl {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin: 0;
+}
+.cs-details__item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0 40px;
+    border-left: 1px solid var(--line);
+}
+.cs-details__item:first-child {
+    padding-left: 0;
+    border-left: none;
+}
+.cs-details dt {
+    margin: 0;
+    font-family: "Whitney Medium", sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--faint);
+}
+.cs-details dd {
+    margin: 0;
+    font-size: var(--text-base);
+    color: var(--text);
+    line-height: 1.5;
+}
+.cs-section-v2 {
+    padding: 180px 0;
+}
+.cs-v2-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 24px;
+    font-family: "Whitney Medium", sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--faint);
+}
+.cs-v2-label::before {
+    content: "";
+    width: 32px;
+    height: 2px;
+    background: var(--accent);
+}
+.cs-v2-heading {
+    margin: 0;
+    font-family: "Reckless", Georgia, serif;
+    font-weight: 300;
+    font-size: clamp(2.4rem, 4.4vw, 4.4rem);
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+}
+.cs-challenge {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+.cs-challenge__body {
+    display: grid;
+    gap: 24px;
+    padding-top: 12px;
+}
+.cs-challenge__body p {
+    margin: 0;
+    font-family: "Whitney Light", sans-serif;
+    font-size: clamp(1.08rem, 1.35vw, 1.28rem);
+    line-height: 1.72;
+    color: var(--muted);
+}
+.cs-process {
+    display: grid;
+    gap: 0;
+    margin-top: 56px;
+}
+.cs-process__phase {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 48px;
+    padding: 56px 0;
+    border-bottom: 1px solid var(--line);
+    align-items: start;
+}
+.cs-process__phase:first-child {
+    padding-top: 0;
+}
+.cs-process__phase:last-child {
+    border-bottom: none;
+}
+.cs-process__number {
+    font-family: "Reckless", Georgia, serif;
+    font-weight: 300;
+    font-size: clamp(3.2rem, 5vw, 4.8rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--faint);
+    position: relative;
+    padding-bottom: 16px;
+}
+.cs-process__number::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 48px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+}
+.cs-process__label {
+    display: block;
+    margin: 0 0 8px;
+    font-family: "Whitney Medium", sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--faint);
+}
+.cs-process__content h3 {
+    margin: 0 0 12px;
+    font-family: "Reckless", Georgia, serif;
+    font-weight: 300;
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+}
+.cs-process__content p {
+    margin: 0;
+    font-family: "Whitney Light", sans-serif;
+    font-size: clamp(1.08rem, 1.35vw, 1.28rem);
+    line-height: 1.72;
+    color: var(--muted);
+    max-width: 56ch;
+}
+.cs-fullbleed {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    margin-top: 48px;
+}
+.cs-fullbleed__img {
+    width: 100%;
+    height: 72vh;
+    object-fit: cover;
+    display: block;
+}
+.cs-stagger {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    align-items: start;
+    margin-top: 80px;
+}
+.cs-stagger__img {
+    overflow: hidden;
+    position: relative;
+}
+.cs-stagger__img:first-child {
+    margin-right: -24px;
+    z-index: 1;
+}
+.cs-stagger__img:last-child {
+    margin-left: -24px;
+    margin-top: 120px;
+}
+.cs-stagger__img img {
+    width: 100%;
+    display: block;
+}
+.cs-stagger__caption {
+    margin-top: 16px;
+    font-family: "Whitney Medium", sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--faint);
+}
+.cs-outcomes {
+    display: grid;
+    gap: 0;
+    margin-top: 56px;
+}
+.cs-outcome {
+    display: grid;
+    grid-template-columns: 0.4fr 0.6fr;
+    gap: 48px;
+    padding: 48px 0;
+    border-bottom: 1px solid var(--line);
+    align-items: baseline;
+}
+.cs-outcome:last-child {
+    border-bottom: none;
+}
+.cs-outcome__number {
+    font-family: "Reckless", Georgia, serif;
+    font-weight: 300;
+    font-size: clamp(3.2rem, 6vw, 5.4rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--accent-deep);
+}
+.cs-outcome__body h3 {
+    margin: 0 0 8px;
+    font-family: "Whitney Medium", sans-serif;
+    font-size: var(--text-sm);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text);
+}
+.cs-outcome__body p {
+    margin: 0;
+    font-size: var(--text-base);
+    line-height: 1.6;
+    color: var(--muted);
+}
+
+/* Case Study v2 – Tablet */
+@media (max-width: 1024px) {
+    .cs-section-v2 { padding: 120px 0; }
+    .cs-hero-v2 { height: 80vh; }
+    .cs-hero-v2__copy { padding: 0 0 56px; }
+    .cs-challenge { grid-template-columns: 1fr; gap: 40px; }
+    .cs-process__phase { grid-template-columns: 100px 1fr; gap: 32px; }
+    .cs-details__item { padding: 0 28px; }
+    .cs-stagger__img:last-child { margin-top: 80px; }
+    .cs-outcome { gap: 32px; }
+}
+
+/* Case Study v2 – Mobile */
+@media (max-width: 760px) {
+    .cs-section-v2 { padding: 80px 0; }
+    .cs-hero-v2 { height: 72vh; min-height: 420px; }
+    .cs-hero-v2__copy { padding: 0 0 40px; }
+    .cs-hero-v2__title { font-size: clamp(2.6rem, 10vw, 4.2rem); }
+    .cs-details dl {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+    }
+    .cs-details__item {
+        padding: 16px 0;
+        border-left: none;
+        border-bottom: 1px solid var(--line);
+    }
+    .cs-details__item:nth-child(2n) {
+        padding-left: 20px;
+        border-left: 1px solid var(--line);
+    }
+    .cs-details__item:nth-last-child(-n+2) {
+        border-bottom: none;
+    }
+    .cs-v2-heading { font-size: clamp(2rem, 7vw, 3rem); }
+    .cs-process__phase { grid-template-columns: 1fr; gap: 16px; }
+    .cs-process__number { font-size: clamp(2.4rem, 8vw, 3.6rem); }
+    .cs-stagger {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .cs-stagger__img:first-child { margin-right: 0; }
+    .cs-stagger__img:last-child { margin-left: 0; margin-top: 0; }
+    .cs-fullbleed__img { height: 48vh; }
+    .cs-outcome { grid-template-columns: 1fr; gap: 12px; }
+}
+

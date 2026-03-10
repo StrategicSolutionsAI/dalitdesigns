@@ -5,7 +5,6 @@
 (function (DS) {
     'use strict';
 
-    var internalNavigationKey = 'ds_internal_navigation';
     var initialized = false;
 
     function init() {
@@ -16,7 +15,7 @@
         initialized = true;
 
         barba.hooks.after(function () {
-            sessionStorage.removeItem(internalNavigationKey);
+            sessionStorage.removeItem(DS.internalNavigationKey);
         });
 
         barba.init({
@@ -34,6 +33,10 @@
                     // Destroy magnetic buttons
                     if (DS.Magnetic && DS.Magnetic.destroy) DS.Magnetic.destroy();
 
+                    // Remove motion-ready so the incoming page's content
+                    // is visible behind the container fade-in
+                    document.documentElement.classList.remove('motion-ready');
+
                     return gsap.to(data.current.container, {
                         opacity: 0,
                         y: -30,
@@ -43,24 +46,16 @@
                 },
 
                 enter: function (data) {
+                    // Remove old container so it doesn't affect layout
+                    // or pollute querySelectorAll during re-init
+                    if (data.current.container.parentNode) {
+                        data.current.container.remove();
+                    }
+
                     // Scroll reset
                     window.scrollTo(0, 0);
                     if (DS.lenis) {
                         DS.lenis.scrollTo(0, { immediate: true });
-                    }
-
-                    if (typeof gsap === 'undefined') {
-                        if (typeof Splitting !== 'undefined') {
-                            Splitting({ target: '[data-split]', by: 'chars' });
-                        }
-                        if (typeof ScrollTrigger !== 'undefined' && typeof ScrollTrigger.refresh === 'function') {
-                            ScrollTrigger.refresh();
-                        }
-                        DS.initModules();
-                        if (DS.scrollToHash && window.location.hash) {
-                            DS.scrollToHash(window.location.hash, true);
-                        }
-                        return;
                     }
 
                     return gsap.fromTo(data.next.container,
@@ -71,16 +66,22 @@
                             duration: 0.6,
                             ease: 'power2.out',
                             onComplete: function () {
-                                // Re-init everything for the new page
+                                // Clear GSAP inline styles so layout calculations
+                                // (sticky header, ScrollTrigger positions) are accurate
+                                gsap.set(data.next.container, { clearProps: 'all' });
+
+                                // Re-init text splits for the new page
                                 if (typeof Splitting !== 'undefined') {
                                     Splitting({ target: '[data-split]', by: 'chars' });
                                 }
 
+                                DS.initModules();
+
+                                // Refresh AFTER new ScrollTrigger instances are created
                                 if (typeof ScrollTrigger !== 'undefined' && typeof ScrollTrigger.refresh === 'function') {
                                     ScrollTrigger.refresh();
                                 }
 
-                                DS.initModules();
                                 if (DS.scrollToHash && window.location.hash) {
                                     DS.scrollToHash(window.location.hash, true);
                                 }

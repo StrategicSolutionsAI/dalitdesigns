@@ -128,7 +128,7 @@
             u_intensity: { value: 0.22 }
         };
 
-        var geometry = new THREE.IcosahedronGeometry(1.2, 64);
+        var geometry = new THREE.IcosahedronGeometry(1.2, 32);
         var material = new THREE.ShaderMaterial({
             uniforms: uniforms,
             vertexShader: vertexShader,
@@ -184,6 +184,10 @@
         if (raf) cancelAnimationFrame(raf);
         window.removeEventListener('resize', resize);
         document.removeEventListener('mousemove', onMouseMove);
+        if (mesh) {
+            if (mesh.geometry) mesh.geometry.dispose();
+            if (mesh.material) mesh.material.dispose();
+        }
         if (renderer) renderer.dispose();
     }
 

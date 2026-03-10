@@ -34,6 +34,7 @@
             initTextSplits();
             initCardParallax();
         } catch (err) {
+            console.warn('DalitSite: Animations init failed:', err);
             showStaticContent();
         }
     }
@@ -42,6 +43,15 @@
     function initFadeReveals() {
         var els = document.querySelectorAll('[data-reveal], [data-animate]');
         els.forEach(function (el) {
+            var rect = el.getBoundingClientRect();
+            var inView = rect.top < window.innerHeight * 0.88;
+
+            if (inView) {
+                gsap.set(el, { opacity: 1, y: 0 });
+                el.classList.add('is-visible');
+                return;
+            }
+
             gsap.fromTo(el,
                 { opacity: 0, y: 30 },
                 {
@@ -69,6 +79,14 @@
         grids.forEach(function (grid) {
             var children = grid.children;
             if (!children.length) return;
+
+            var rect = grid.getBoundingClientRect();
+            var inView = rect.top < window.innerHeight * 0.85;
+
+            if (inView) {
+                gsap.set(children, { opacity: 1, y: 0 });
+                return;
+            }
 
             gsap.fromTo(children,
                 { opacity: 0, y: 40 },
@@ -130,18 +148,25 @@
     }
 
     /* ── Metric count-up ── */
+    function formatWithCommas(n) {
+        return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    }
+
     function initMetricCountUp() {
         var metrics = document.querySelectorAll('.metric-number');
         metrics.forEach(function (el) {
             var text = el.textContent.trim();
-            var match = text.match(/^(\[?)(\d+)(\]?[%+]?)/);
-            if (!match) return;
-
-            var target = parseInt(match[2], 10);
-            var prefix = match[1] || '';
-            var suffix = text.replace(/^[\[\d\]]+/, '').replace(match[2], '');
             // Keep original text for placeholder-style metrics
             if (text.indexOf('[') === 0) return;
+
+            // Strip commas for matching, support formats like "1,200+" or "85%"
+            var stripped = text.replace(/,/g, '');
+            var match = stripped.match(/^(\d+)([%+x]?.*)$/);
+            if (!match) return;
+
+            var target = parseInt(match[1], 10);
+            var suffix = match[2] || '';
+            var useCommas = text.indexOf(',') !== -1;
 
             var obj = { val: 0 };
             gsap.to(obj, {
@@ -154,7 +179,8 @@
                     once: true
                 },
                 onUpdate: function () {
-                    el.textContent = prefix + Math.round(obj.val) + suffix;
+                    var num = Math.round(obj.val);
+                    el.textContent = (useCommas ? formatWithCommas(num) : num) + suffix;
                 }
             });
         });
@@ -166,6 +192,14 @@
         splitEls.forEach(function (el) {
             var chars = el.querySelectorAll('.char');
             if (!chars.length) return;
+
+            var rect = el.getBoundingClientRect();
+            var inView = rect.top < window.innerHeight * 0.85;
+
+            if (inView) {
+                gsap.set(chars, { opacity: 1, y: 0, rotateX: 0 });
+                return;
+            }
 
             gsap.fromTo(chars,
                 { opacity: 0, y: 80, rotateX: -40 },
