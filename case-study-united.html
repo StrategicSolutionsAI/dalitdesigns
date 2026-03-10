@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>United Airlines — Case Study | Dalit Barrett</title>
+  <meta name="description" content="Preview case study for United Airlines — mobile travel flows designed for clarity, speed, and calm under real-world trip pressure.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="United Airlines Case Study | Dalit Barrett">
+  <meta property="og:description" content="Mobile travel product design focused on calm flows, legibility, and faster in-trip decisions.">
+  <meta property="og:image" content="files/images/united.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="United Airlines Case Study | Dalit Barrett">
+  <meta name="twitter:description" content="Mobile travel design focused on clarity, legibility, and confidence in motion.">
+  <meta name="twitter:image" content="files/images/united.png">
+  <link rel="icon" type="image/png" href="files/uploads/favicon.png">
+  <link rel="shortcut icon" href="files/uploads/favicon.ico">
+  <link rel="preload" href="files/images/logo-horizontal.svg" as="image" type="image/svg+xml">
+  <link rel="preload" href="files/fonts/whitney-book.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="files/fonts/whitney-light.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="files/fonts/RecklessTRIAL-Light.otf" as="font" type="font/otf" crossorigin>
+  <link rel="stylesheet" href="files/css/main.css?v=5">
+  <link rel="stylesheet" href="https://unpkg.com/splitting@1.0.6/dist/splitting.css">
+  <link rel="stylesheet" href="https://unpkg.com/splitting@1.0.6/dist/splitting-cells.css">
+  <style>
+    .placeholder-page {
+      padding: 40px 0 96px;
+    }
+    .placeholder-shell {
+      width: var(--site-width);
+      margin: 0 auto;
+      display: grid;
+      gap: 28px;
+    }
+    .placeholder-hero {
+      display: grid;
+      grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
+      gap: 40px;
+      align-items: center;
+    }
+    .placeholder-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0;
+      font-family: "Whitney Medium", sans-serif;
+      font-size: var(--text-sm);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--faint);
+    }
+    .placeholder-label::before {
+      content: "";
+      width: 32px;
+      height: 2px;
+      background: var(--accent);
+    }
+    .placeholder-copy h1 {
+      margin: 22px 0 0;
+      font-family: "Reckless", Georgia, serif;
+      font-weight: 300;
+      font-size: clamp(2.7rem, 5vw, 4.5rem);
+      line-height: 1.06;
+      letter-spacing: -0.03em;
+    }
+    .placeholder-copy p {
+      margin: 18px 0 0;
+      font-family: "Whitney Light", sans-serif;
+      font-size: var(--text-lg);
+      line-height: 1.65;
+      color: var(--muted);
+      max-width: 34ch;
+    }
+    .placeholder-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 28px;
+    }
+    .placeholder-media {
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(20, 25, 34, 0.08);
+      background: linear-gradient(180deg, #ffffff 0%, #f7f9fc 100%);
+      box-shadow: var(--shadow);
+    }
+    .placeholder-media img {
+      width: 100%;
+      display: block;
+    }
+    .placeholder-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+    .placeholder-card {
+      padding: 24px;
+      border-radius: 22px;
+      border: 1px solid rgba(20, 25, 34, 0.08);
+      background: rgba(255, 255, 255, 0.9);
+    }
+    .placeholder-card h2 {
+      margin: 0 0 10px;
+      font-family: "Reckless", Georgia, serif;
+      font-weight: 300;
+      font-size: 1.55rem;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+    .placeholder-card p,
+    .placeholder-card li {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+    .placeholder-card ul {
+      margin: 0;
+      padding-left: 18px;
+      display: grid;
+      gap: 10px;
+    }
+    @media (max-width: 900px) {
+      .placeholder-hero,
+      .placeholder-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body id="top" data-barba="wrapper">
+  <div data-barba="container" data-barba-namespace="case-united">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="site-brand" href="index.html" aria-label="Dalit Designs home">
+          <img src="files/images/logo-horizontal.svg" alt="Dalit Designs" width="220" height="32" fetchpriority="high" decoding="sync">
+        </a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="index.html#work">Work</a>
+          <a href="about.html">About</a>
+          <a class="nav-cta" href="mailto:dalit@dalitdesigns.com">Get in touch</a>
+        </nav>
+        <button class="hamburger" id="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+      <nav aria-label="Mobile navigation">
+        <a class="mobile-nav-link" href="index.html#work">Work</a>
+        <a class="mobile-nav-link" href="about.html">About</a>
+        <a class="mobile-nav-link" href="mailto:dalit@dalitdesigns.com">Get in touch</a>
+      </nav>
+    </div>
+
+    <main id="main-content" class="placeholder-page">
+      <div class="placeholder-shell">
+        <section class="placeholder-hero">
+          <div class="placeholder-copy" data-reveal>
+            <p class="placeholder-label">Case Study Preview</p>
+            <h1 data-split>United Airlines</h1>
+            <p>A mobile travel product engagement designed to feel clear, calm, and trustworthy when users are moving fast and need immediate answers.</p>
+            <div class="placeholder-actions">
+              <a class="hero-cta" href="index.html#work">Back to selected work</a>
+              <a class="hero-link" href="mailto:dalit@dalitdesigns.com">Request full walkthrough <svg class="arrow-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 7h11m0 0L8 3m4 4L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
+          </div>
+          <figure class="placeholder-media" data-reveal style="--delay: 80ms;">
+            <img src="files/images/united.png" alt="United Airlines mobile product preview">
+          </figure>
+        </section>
+
+        <section class="placeholder-grid">
+          <article class="placeholder-card" data-reveal>
+            <h2>Current status</h2>
+            <p>The dedicated case-study writeup is still in progress. This page now stands in cleanly so the live site keeps every internal project link functional.</p>
+          </article>
+          <article class="placeholder-card" data-reveal style="--delay: 60ms;">
+            <h2>Focus areas</h2>
+            <ul>
+              <li>Mobile travel flows under time pressure</li>
+              <li>Legible hierarchy and calm interaction states</li>
+              <li>Confidence-building in-trip information design</li>
+            </ul>
+          </article>
+          <article class="placeholder-card" data-reveal style="--delay: 120ms;">
+            <h2>Next step</h2>
+            <p>If you want a more complete walkthrough before the final portfolio page is published, I can share the project context directly.</p>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-panel" data-reveal>
+          <div class="footer-grid">
+            <div>
+              <img class="footer-mark" src="files/images/logo.svg" alt="Dalit Designs">
+              <p class="footer-tagline">Senior product designer for product teams and established brands.</p>
+            </div>
+            <div>
+              <p class="footer-heading">Work</p>
+              <div class="footer-links">
+                <a href="case-study-paperlesspost.html">Paperless Post</a>
+                <a href="case-study-vitaminwater.html">Vitamin Water</a>
+                <a href="case-study-target.html">Target</a>
+                <a href="case-study-united.html">United Airlines</a>
+              </div>
+            </div>
+            <div>
+              <p class="footer-heading">Connect</p>
+              <div class="footer-links">
+                <a href="mailto:dalit@dalitdesigns.com">dalit@dalitdesigns.com</a>
+                <a href="https://www.linkedin.com/in/dalit-barrett-18068011/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://dribbble.com/DalitDesigns" target="_blank" rel="noopener">Dribbble</a>
+                <a href="https://twitter.com/dalitdesigns" target="_blank" rel="noopener">X (Twitter)</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>Austin, Texas</span>
+        <span>&copy; <span id="current-year">2026</span> Dalit Designs</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.min.js"></script>
+  <script src="https://unpkg.com/@barba/core@2.10.3/dist/barba.umd.js"></script>
+  <script src="files/js/animations.js?v=2"></script>
+  <script src="files/js/magnetic.js"></script>
+  <script src="files/js/transitions.js?v=5"></script>
+  <script src="files/js/app.js?v=8"></script>
+</body>
+</html>
