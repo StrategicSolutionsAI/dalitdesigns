@@ -347,6 +347,33 @@ var DalitSite = window.DalitSite || {};
         window.addEventListener('resize', center);
     }
 
+    /* ── Back to top button ── */
+    function initBackToTop() {
+        var btn = document.querySelector('.back-to-top');
+        if (!btn) return;
+
+        var threshold = 600;
+        var visible = false;
+
+        function toggle() {
+            var shouldShow = window.pageYOffset > threshold;
+            if (shouldShow === visible) return;
+            visible = shouldShow;
+            btn.classList.toggle('is-visible', shouldShow);
+        }
+
+        window.addEventListener('scroll', toggle, { passive: true });
+        toggle();
+
+        btn.addEventListener('click', function () {
+            if (lenis && !reducedMotion) {
+                lenis.scrollTo(0, { duration: 1.4, easing: easeOutQuart });
+            } else {
+                window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
+            }
+        });
+    }
+
     /* ── Main init ── */
     function initModules() {
         setYear();
@@ -354,6 +381,7 @@ var DalitSite = window.DalitSite || {};
         initMobileNav();
         initCaseMobileNav();
         initPortraitGradient();
+        initBackToTop();
 
         // Init modules in order
         if (DS.Animations && DS.Animations.init) DS.Animations.init();

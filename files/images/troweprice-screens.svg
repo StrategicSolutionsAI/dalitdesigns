@@ -1,0 +1,221 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7f9fc"/>
+      <stop offset="100%" stop-color="#eef2f7"/>
+    </linearGradient>
+    <filter id="ps" x="-6%" y="-3%" width="112%" height="110%">
+      <feDropShadow dx="0" dy="10" stdDeviation="24" flood-color="#0a2540" flood-opacity="0.15"/>
+    </filter>
+    <clipPath id="s1"><rect x="72" y="76" width="280" height="606" rx="8"/></clipPath>
+    <clipPath id="s2"><rect x="422" y="76" width="280" height="606" rx="8"/></clipPath>
+    <clipPath id="s3"><rect x="772" y="76" width="280" height="606" rx="8"/></clipPath>
+    <clipPath id="s4"><rect x="1048" y="76" width="280" height="606" rx="8"/></clipPath>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#bg3)"/>
+
+  <!-- Title -->
+  <text x="700" y="800" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#8a97a8" text-anchor="middle" letter-spacing="2" font-weight="500">MARKETS &bull; FUND DETAIL &bull; TRADE &bull; INSIGHTS</text>
+  <text x="700" y="850" font-family="Georgia,serif" font-size="22" fill="#003169" text-anchor="middle">Four key flows, one cohesive experience</text>
+
+  <!-- Phone 1: Markets -->
+  <g filter="url(#ps)">
+    <rect x="60" y="50" width="304" height="656" rx="36" fill="#1c1c2e" stroke="#c8d0da" stroke-width="0.5"/>
+    <rect x="72" y="76" width="280" height="606" rx="8" fill="#ffffff"/>
+    <g clip-path="url(#s1)">
+      <rect x="72" y="76" width="280" height="42" fill="#003169"/>
+      <text x="92" y="102" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#fff" font-weight="500">9:41</text>
+      <rect x="72" y="118" width="280" height="48" fill="#003169"/>
+      <text x="212" y="148" font-family="system-ui,-apple-system,sans-serif" font-size="16" fill="#ffffff" font-weight="600" text-anchor="middle">Markets</text>
+      <!-- Market indices -->
+      <text x="92" y="190" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#8a97a8" font-weight="600" letter-spacing="0.5">INDICES</text>
+      <rect x="92" y="200" width="240" height="60" rx="10" fill="#f7f9fc"/>
+      <text x="108" y="222" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1a2b42" font-weight="600">S&amp;P 500</text>
+      <text x="108" y="242" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#8a97a8">5,482.31</text>
+      <rect x="260" y="212" width="56" height="22" rx="11" fill="#e8f8f4"/>
+      <text x="288" y="228" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#00b894" font-weight="600" text-anchor="middle">+0.82%</text>
+      <rect x="92" y="268" width="240" height="60" rx="10" fill="#f7f9fc"/>
+      <text x="108" y="290" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1a2b42" font-weight="600">NASDAQ</text>
+      <text x="108" y="310" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#8a97a8">17,234.56</text>
+      <rect x="260" y="280" width="56" height="22" rx="11" fill="#e8f8f4"/>
+      <text x="288" y="296" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#00b894" font-weight="600" text-anchor="middle">+1.14%</text>
+      <rect x="92" y="336" width="240" height="60" rx="10" fill="#f7f9fc"/>
+      <text x="108" y="358" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1a2b42" font-weight="600">Dow Jones</text>
+      <text x="108" y="378" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#8a97a8">39,112.84</text>
+      <rect x="260" y="348" width="56" height="22" rx="11" fill="#fef4f4"/>
+      <text x="288" y="364" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#e74c3c" font-weight="600" text-anchor="middle">-0.23%</text>
+      <!-- Trending -->
+      <text x="92" y="424" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#8a97a8" font-weight="600" letter-spacing="0.5">TRENDING FUNDS</text>
+      <rect x="92" y="436" width="240" height="52" rx="10" fill="#f7f9fc"/>
+      <text x="108" y="458" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1a2b42" font-weight="500">Blue Chip Growth</text>
+      <text x="108" y="474" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#00b894">+2.34%</text>
+      <rect x="92" y="496" width="240" height="52" rx="10" fill="#f7f9fc"/>
+      <text x="108" y="518" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1a2b42" font-weight="500">Growth Stock</text>
+      <text x="108" y="534" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#00b894">+1.92%</text>
+      <rect x="92" y="556" width="240" height="52" rx="10" fill="#f7f9fc"/>
+      <text x="108" y="578" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1a2b42" font-weight="500">Dividend Growth</text>
+      <text x="108" y="594" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#00b894">+0.87%</text>
+      <!-- Tab bar -->
+      <rect x="72" y="638" width="280" height="44" fill="#ffffff"/>
+      <line x1="72" y1="638" x2="352" y2="638" stroke="#e0e6ed" stroke-width="0.5"/>
+      <text x="117" y="664" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="#8a97a8" text-anchor="middle">Home</text>
+      <text x="167" y="664" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="#8a97a8" text-anchor="middle">Accounts</text>
+      <text x="212" y="664" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="#003169" text-anchor="middle" font-weight="600">Markets</text>
+      <rect x="199" y="669" width="26" height="2" rx="1" fill="#003169"/>
+      <text x="257" y="664" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="#8a97a8" text-anchor="middle">Plan</text>
+      <text x="307" y="664" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="#8a97a8" text-anchor="middle">More</text>
+    </g>
+    <rect x="178" y="50" width="68" height="24" rx="12" fill="#1c1c2e"/>
+  </g>
+
+  <!-- Phone 2: Fund Detail -->
+  <g filter="url(#ps)">
+    <rect x="410" y="50" width="304" height="656" rx="36" fill="#1c1c2e" stroke="#c8d0da" stroke-width="0.5"/>
+    <rect x="422" y="76" width="280" height="606" rx="8" fill="#ffffff"/>
+    <g clip-path="url(#s2)">
+      <rect x="422" y="76" width="280" height="42" fill="#003169"/>
+      <text x="442" y="102" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#fff" font-weight="500">9:41</text>
+      <rect x="422" y="118" width="280" height="48" fill="#003169"/>
+      <text x="442" y="148" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="rgba(255,255,255,0.7)">&#8592;</text>
+      <text x="562" y="148" font-family="system-ui,-apple-system,sans-serif" font-size="15" fill="#ffffff" font-weight="600" text-anchor="middle">Blue Chip Growth</text>
+      <!-- Price -->
+      <text x="562" y="202" font-family="system-ui,-apple-system,sans-serif" font-size="36" fill="#003169" font-weight="700" text-anchor="middle">$156.42</text>
+      <rect x="520" y="216" width="84" height="24" rx="12" fill="#e8f8f4"/>
+      <text x="562" y="233" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#00b894" font-weight="600" text-anchor="middle">+$2.18 (1.41%)</text>
+      <!-- Chart area -->
+      <rect x="442" y="252" width="240" height="140" rx="0" fill="#ffffff"/>
+      <path d="M462,370 C480,360 500,365 520,348 S550,330 570,338 S600,318 620,310 S650,315 670,305 L670,380 L462,380 Z" fill="url(#chart-gradient)" opacity="0.5"/>
+      <path d="M462,370 C480,360 500,365 520,348 S550,330 570,338 S600,318 620,310 S650,315 670,305" fill="none" stroke="#003169" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="670" cy="305" r="4" fill="#003169"/>
+      <!-- Time pills -->
+      <g transform="translate(442,400)">
+        <rect x="12" y="0" width="36" height="24" rx="12" fill="#f0f4f8"/>
+        <text x="30" y="16" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#6b7c93" text-anchor="middle">1D</text>
+        <rect x="56" y="0" width="36" height="24" rx="12" fill="#f0f4f8"/>
+        <text x="74" y="16" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#6b7c93" text-anchor="middle">1W</text>
+        <rect x="100" y="0" width="36" height="24" rx="12" fill="#003169"/>
+        <text x="118" y="16" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="600">1M</text>
+        <rect x="144" y="0" width="36" height="24" rx="12" fill="#f0f4f8"/>
+        <text x="162" y="16" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#6b7c93" text-anchor="middle">1Y</text>
+        <rect x="188" y="0" width="36" height="24" rx="12" fill="#f0f4f8"/>
+        <text x="206" y="16" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#6b7c93" text-anchor="middle">5Y</text>
+        <rect x="232" y="0" width="36" height="24" rx="12" fill="#f0f4f8"/>
+        <text x="250" y="16" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#6b7c93" text-anchor="middle">All</text>
+      </g>
+      <!-- Fund info -->
+      <text x="454" y="452" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#8a97a8" font-weight="600" letter-spacing="0.5">FUND DETAILS</text>
+      <rect x="454" y="464" width="236" height="44" rx="0" fill="#ffffff"/>
+      <text x="454" y="482" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#8a97a8">Category</text>
+      <text x="690" y="482" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#1a2b42" text-anchor="end" font-weight="500">Large Growth</text>
+      <line x1="454" y1="496" x2="690" y2="496" stroke="#f0f4f8" stroke-width="1"/>
+      <rect x="454" y="500" width="236" height="44" rx="0" fill="#ffffff"/>
+      <text x="454" y="518" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#8a97a8">Expense Ratio</text>
+      <text x="690" y="518" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#1a2b42" text-anchor="end" font-weight="500">0.69%</text>
+      <line x1="454" y1="532" x2="690" y2="532" stroke="#f0f4f8" stroke-width="1"/>
+      <rect x="454" y="536" width="236" height="44" rx="0" fill="#ffffff"/>
+      <text x="454" y="554" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#8a97a8">Net Assets</text>
+      <text x="690" y="554" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#1a2b42" text-anchor="end" font-weight="500">$67.4B</text>
+      <line x1="454" y1="568" x2="690" y2="568" stroke="#f0f4f8" stroke-width="1"/>
+      <!-- Action buttons -->
+      <rect x="454" y="586" width="114" height="40" rx="20" fill="#003169"/>
+      <text x="511" y="611" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#ffffff" font-weight="600" text-anchor="middle">Buy</text>
+      <rect x="576" y="586" width="114" height="40" rx="20" fill="#f0f4f8"/>
+      <text x="633" y="611" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#003169" font-weight="600" text-anchor="middle">Sell</text>
+      <!-- Tab bar -->
+      <rect x="422" y="638" width="280" height="44" fill="#ffffff"/>
+      <line x1="422" y1="638" x2="702" y2="638" stroke="#e0e6ed" stroke-width="0.5"/>
+    </g>
+    <rect x="528" y="50" width="68" height="24" rx="12" fill="#1c1c2e"/>
+  </g>
+
+  <!-- Phone 3: Trade Flow -->
+  <g filter="url(#ps)">
+    <rect x="760" y="50" width="304" height="656" rx="36" fill="#1c1c2e" stroke="#c8d0da" stroke-width="0.5"/>
+    <rect x="772" y="76" width="280" height="606" rx="8" fill="#ffffff"/>
+    <g clip-path="url(#s3)">
+      <rect x="772" y="76" width="280" height="42" fill="#003169"/>
+      <text x="792" y="102" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#fff" font-weight="500">9:41</text>
+      <rect x="772" y="118" width="280" height="48" fill="#003169"/>
+      <text x="792" y="148" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="rgba(255,255,255,0.7)">&#8592;</text>
+      <text x="912" y="148" font-family="system-ui,-apple-system,sans-serif" font-size="16" fill="#ffffff" font-weight="600" text-anchor="middle">Buy Shares</text>
+      <!-- Trade form -->
+      <text x="792" y="198" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#8a97a8" font-weight="600" letter-spacing="0.5">FROM ACCOUNT</text>
+      <rect x="792" y="208" width="240" height="52" rx="10" fill="#f7f9fc"/>
+      <text x="812" y="232" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1a2b42" font-weight="500">Roth IRA</text>
+      <text x="812" y="248" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#8a97a8">Available: $8,420.00</text>
+      <text x="1012" y="236" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#8a97a8" text-anchor="end">&#9662;</text>
+      <text x="792" y="290" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#8a97a8" font-weight="600" letter-spacing="0.5">FUND</text>
+      <rect x="792" y="300" width="240" height="48" rx="10" fill="#f7f9fc"/>
+      <text x="812" y="330" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1a2b42" font-weight="500">Blue Chip Growth (TRBCX)</text>
+      <!-- Amount input -->
+      <text x="792" y="380" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#8a97a8" font-weight="600" letter-spacing="0.5">AMOUNT</text>
+      <rect x="792" y="390" width="240" height="64" rx="10" fill="#f7f9fc" stroke="#003169" stroke-width="1.5"/>
+      <text x="912" y="430" font-family="system-ui,-apple-system,sans-serif" font-size="32" fill="#003169" font-weight="700" text-anchor="middle">$2,500</text>
+      <!-- Quick amounts -->
+      <g transform="translate(792,468)">
+        <rect x="0" y="0" width="56" height="28" rx="14" fill="#e8f0fe"/>
+        <text x="28" y="19" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#003169" text-anchor="middle" font-weight="500">$500</text>
+        <rect x="62" y="0" width="56" height="28" rx="14" fill="#e8f0fe"/>
+        <text x="90" y="19" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#003169" text-anchor="middle" font-weight="500">$1,000</text>
+        <rect x="124" y="0" width="56" height="28" rx="14" fill="#003169"/>
+        <text x="152" y="19" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="600">$2,500</text>
+        <rect x="186" y="0" width="54" height="28" rx="14" fill="#e8f0fe"/>
+        <text x="213" y="19" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#003169" text-anchor="middle" font-weight="500">Max</text>
+      </g>
+      <!-- Frequency -->
+      <text x="792" y="528" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#8a97a8" font-weight="600" letter-spacing="0.5">FREQUENCY</text>
+      <rect x="792" y="538" width="240" height="48" rx="10" fill="#f7f9fc"/>
+      <text x="812" y="568" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1a2b42" font-weight="500">One-time purchase</text>
+      <text x="1012" y="568" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#8a97a8" text-anchor="end">&#9662;</text>
+      <!-- Submit button -->
+      <rect x="792" y="604" width="240" height="48" rx="24" fill="#003169"/>
+      <text x="912" y="634" font-family="system-ui,-apple-system,sans-serif" font-size="15" fill="#ffffff" font-weight="600" text-anchor="middle">Review Order</text>
+      <!-- Tab bar -->
+      <rect x="772" y="638" width="280" height="44" fill="#ffffff"/>
+      <line x1="772" y1="638" x2="1052" y2="638" stroke="#e0e6ed" stroke-width="0.5"/>
+    </g>
+    <rect x="878" y="50" width="68" height="24" rx="12" fill="#1c1c2e"/>
+  </g>
+
+  <!-- Phone 4: Insights -->
+  <g filter="url(#ps)">
+    <rect x="1036" y="50" width="304" height="656" rx="36" fill="#1c1c2e" stroke="#c8d0da" stroke-width="0.5"/>
+    <rect x="1048" y="76" width="280" height="606" rx="8" fill="#ffffff"/>
+    <g clip-path="url(#s4)">
+      <rect x="1048" y="76" width="280" height="42" fill="#003169"/>
+      <text x="1068" y="102" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#fff" font-weight="500">9:41</text>
+      <rect x="1048" y="118" width="280" height="48" fill="#003169"/>
+      <text x="1188" y="148" font-family="system-ui,-apple-system,sans-serif" font-size="16" fill="#ffffff" font-weight="600" text-anchor="middle">Insights</text>
+      <!-- Insight card 1 -->
+      <rect x="1068" y="186" width="240" height="120" rx="12" fill="#003169"/>
+      <text x="1084" y="212" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)" font-weight="600" letter-spacing="0.5">FOR YOU</text>
+      <text x="1084" y="236" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#ffffff" font-weight="600">Your portfolio is up 18.4%</text>
+      <text x="1084" y="256" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.6)">You're outperforming 72% of</text>
+      <text x="1084" y="272" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.6)">similar portfolios this year.</text>
+      <rect x="1084" y="284" width="80" height="8" rx="4" fill="rgba(255,255,255,0.15)"/>
+      <rect x="1084" y="284" width="58" height="8" rx="4" fill="#00d4aa"/>
+      <!-- Insight card 2 -->
+      <rect x="1068" y="320" width="240" height="100" rx="12" fill="#f7f9fc"/>
+      <text x="1084" y="346" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#8a97a8" font-weight="600" letter-spacing="0.5">RETIREMENT</text>
+      <text x="1084" y="370" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#1a2b42" font-weight="600">Increase contributions?</text>
+      <text x="1084" y="392" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#6b7c93">Adding $200/mo could add $48K</text>
+      <text x="1084" y="408" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#6b7c93">to your retirement by 2045.</text>
+      <!-- Insight card 3 -->
+      <rect x="1068" y="432" width="240" height="100" rx="12" fill="#f7f9fc"/>
+      <text x="1084" y="458" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#8a97a8" font-weight="600" letter-spacing="0.5">TAX STRATEGY</text>
+      <text x="1084" y="482" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#1a2b42" font-weight="600">Tax-loss harvesting</text>
+      <text x="1084" y="504" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#6b7c93">2 positions may benefit from</text>
+      <text x="1084" y="520" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#6b7c93">tax-loss harvesting this quarter.</text>
+      <!-- Insight card 4 -->
+      <rect x="1068" y="544" width="240" height="80" rx="12" fill="#f7f9fc"/>
+      <text x="1084" y="570" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#8a97a8" font-weight="600" letter-spacing="0.5">MARKET UPDATE</text>
+      <text x="1084" y="594" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#1a2b42" font-weight="600">Weekly market recap</text>
+      <text x="1084" y="614" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#6b7c93">Equities rally on strong earnings.</text>
+      <!-- Tab bar -->
+      <rect x="1048" y="638" width="280" height="44" fill="#ffffff"/>
+      <line x1="1048" y1="638" x2="1328" y2="638" stroke="#e0e6ed" stroke-width="0.5"/>
+    </g>
+    <rect x="1154" y="50" width="68" height="24" rx="12" fill="#1c1c2e"/>
+  </g>
+</svg>

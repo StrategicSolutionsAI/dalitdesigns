@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#003169"/>
+      <stop offset="60%" stop-color="#001d3d"/>
+      <stop offset="100%" stop-color="#000d1a"/>
+    </linearGradient>
+    <linearGradient id="ring-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4da3ff"/>
+      <stop offset="50%" stop-color="#00d4aa"/>
+      <stop offset="100%" stop-color="#00b894"/>
+    </linearGradient>
+    <linearGradient id="card-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.08)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.03)"/>
+    </linearGradient>
+    <filter id="glow2" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="30" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="cs2" x="-5%" y="-3%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <clipPath id="retClip"><rect x="422" y="62" width="356" height="676" rx="10"/></clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bg4)"/>
+  <!-- Ambient orbs -->
+  <circle cx="600" cy="400" r="350" fill="#4da3ff" opacity="0.03" filter="url(#glow2)"/>
+  <circle cx="400" cy="500" r="200" fill="#00d4aa" opacity="0.04" filter="url(#glow2)"/>
+
+  <!-- Phone mockup -->
+  <g filter="url(#cs2)">
+    <rect x="408" y="36" width="384" height="728" rx="42" fill="#0f0f1e" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    <rect x="422" y="62" width="356" height="676" rx="10" fill="#001d3d"/>
+    <g clip-path="url(#retClip)">
+      <!-- Status bar -->
+      <rect x="422" y="62" width="356" height="42" fill="#002244"/>
+      <text x="446" y="90" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="rgba(255,255,255,0.7)" font-weight="500">9:41</text>
+      <!-- Header -->
+      <rect x="422" y="104" width="356" height="56" fill="#002244"/>
+      <text x="600" y="140" font-family="system-ui,-apple-system,sans-serif" font-size="18" fill="#ffffff" font-weight="600" text-anchor="middle">Retirement Planner</text>
+
+      <!-- Progress Ring (large, centered) -->
+      <g transform="translate(600,270)">
+        <circle cx="0" cy="0" r="90" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="14"/>
+        <circle cx="0" cy="0" r="90" fill="none" stroke="url(#ring-grad)" stroke-width="14" stroke-dasharray="407 565" stroke-linecap="round" transform="rotate(-90)"/>
+        <text x="0" y="-14" font-family="system-ui,-apple-system,sans-serif" font-size="42" fill="#ffffff" font-weight="700" text-anchor="middle">72%</text>
+        <text x="0" y="14" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="rgba(255,255,255,0.5)" text-anchor="middle">on track to goal</text>
+      </g>
+
+      <!-- Target info -->
+      <rect x="462" y="390" width="276" height="64" rx="14" fill="url(#card-bg)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <text x="490" y="416" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.4)" font-weight="600" letter-spacing="0.5">TARGET</text>
+      <text x="490" y="438" font-family="system-ui,-apple-system,sans-serif" font-size="18" fill="#ffffff" font-weight="600">$1,200,000</text>
+      <text x="710" y="416" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.4)" font-weight="600" letter-spacing="0.5" text-anchor="end">BY</text>
+      <text x="710" y="438" font-family="system-ui,-apple-system,sans-serif" font-size="18" fill="#ffffff" font-weight="600" text-anchor="end">2045</text>
+
+      <!-- Projection chart -->
+      <text x="462" y="484" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.4)" font-weight="600" letter-spacing="0.5">PROJECTED GROWTH</text>
+      <rect x="462" y="496" width="276" height="100" rx="10" fill="url(#card-bg)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <!-- Chart lines -->
+      <line x1="482" y1="576" x2="718" y2="576" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <line x1="482" y1="546" x2="718" y2="546" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <line x1="482" y1="516" x2="718" y2="516" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <!-- Growth curve -->
+      <path d="M482,575 C510,572 540,565 570,548 S620,518 660,505 L718,500" fill="none" stroke="#4da3ff" stroke-width="2" stroke-linecap="round" opacity="0.4" stroke-dasharray="4 4"/>
+      <path d="M482,575 C510,570 540,555 570,530 S620,500 660,488 L718,478" fill="none" stroke="#00d4aa" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="600" cy="520" r="3.5" fill="#00d4aa"/>
+      <text x="600" y="512" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="#00d4aa" text-anchor="middle">Today</text>
+      <!-- Legend -->
+      <circle cx="492" y="500" r="3" fill="#00d4aa"/>
+      <text x="500" y="503" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="rgba(255,255,255,0.5)">Current pace</text>
+      <circle cx="580" y="500" r="3" fill="#4da3ff" opacity="0.4"/>
+      <text x="588" y="503" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="rgba(255,255,255,0.5)">Goal pace</text>
+
+      <!-- Milestones -->
+      <text x="462" y="624" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.4)" font-weight="600" letter-spacing="0.5">MILESTONES</text>
+      <rect x="462" y="636" width="276" height="48" rx="10" fill="url(#card-bg)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <circle cx="486" cy="660" r="10" fill="rgba(0,212,170,0.2)"/>
+      <text x="486" y="664" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#00d4aa" text-anchor="middle">&#10003;</text>
+      <text x="504" y="656" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#ffffff" font-weight="500">Max 401(k) contributions</text>
+      <text x="504" y="672" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)">$23,000 / year</text>
+
+      <rect x="462" y="692" width="276" height="48" rx="10" fill="url(#card-bg)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <circle cx="486" cy="716" r="10" fill="rgba(77,163,255,0.2)"/>
+      <text x="486" y="720" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="#4da3ff" text-anchor="middle">2</text>
+      <text x="504" y="712" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#ffffff" font-weight="500">Catch-up contributions</text>
+      <text x="504" y="728" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)">Eligible at age 50</text>
+    </g>
+    <!-- Notch -->
+    <rect x="548" y="36" width="104" height="28" rx="14" fill="#0f0f1e"/>
+  </g>
+
+  <!-- Floating stats on left -->
+  <g filter="url(#cs2)" transform="translate(60, 180)">
+    <rect x="0" y="0" width="260" height="96" rx="16" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <text x="24" y="30" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)" font-weight="600" letter-spacing="0.5">CURRENT SAVINGS</text>
+    <text x="24" y="58" font-family="system-ui,-apple-system,sans-serif" font-size="28" fill="#ffffff" font-weight="700">$284,692</text>
+    <text x="24" y="80" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#00d4aa">+$42,180 this year</text>
+  </g>
+
+  <g filter="url(#cs2)" transform="translate(60, 310)">
+    <rect x="0" y="0" width="260" height="96" rx="16" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <text x="24" y="30" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)" font-weight="600" letter-spacing="0.5">MONTHLY CONTRIBUTION</text>
+    <text x="24" y="58" font-family="system-ui,-apple-system,sans-serif" font-size="28" fill="#ffffff" font-weight="700">$1,917</text>
+    <text x="24" y="80" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="rgba(255,255,255,0.5)">401(k) + IRA combined</text>
+  </g>
+
+  <!-- Floating stats on right -->
+  <g filter="url(#cs2)" transform="translate(880, 180)">
+    <rect x="0" y="0" width="260" height="96" rx="16" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <text x="24" y="30" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)" font-weight="600" letter-spacing="0.5">PROJECTED AT RETIREMENT</text>
+    <text x="24" y="58" font-family="system-ui,-apple-system,sans-serif" font-size="28" fill="#ffffff" font-weight="700">$864,000</text>
+    <text x="24" y="80" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#4da3ff">72% of $1.2M goal</text>
+  </g>
+
+  <g filter="url(#cs2)" transform="translate(880, 310)">
+    <rect x="0" y="0" width="260" height="96" rx="16" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <text x="24" y="30" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)" font-weight="600" letter-spacing="0.5">YEARS TO RETIREMENT</text>
+    <text x="24" y="58" font-family="system-ui,-apple-system,sans-serif" font-size="28" fill="#ffffff" font-weight="700">19 years</text>
+    <text x="24" y="80" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="rgba(255,255,255,0.5)">Target year: 2045</text>
+  </g>
+</svg>

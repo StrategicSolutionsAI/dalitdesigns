@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#f0f4f8"/>
+      <stop offset="100%" stop-color="#e8eef5"/>
+    </linearGradient>
+    <linearGradient id="blue-btn" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#003169"/>
+      <stop offset="100%" stop-color="#0a4d8c"/>
+    </linearGradient>
+    <linearGradient id="chart-gradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#003169" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#003169" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="card-shadow" x="-5%" y="-2%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#0a2540" flood-opacity="0.08"/>
+    </filter>
+    <filter id="phone-shadow2" x="-8%" y="-4%" width="116%" height="112%">
+      <feDropShadow dx="0" dy="16" stdDeviation="32" flood-color="#0a2540" flood-opacity="0.2"/>
+    </filter>
+    <clipPath id="phoneClip"><rect x="422" y="96" width="356" height="710" rx="10"/></clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="900" fill="url(#bg2)"/>
+  <!-- Subtle dot pattern -->
+  <pattern id="dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+    <circle cx="12" cy="12" r="0.8" fill="#003169" opacity="0.06"/>
+  </pattern>
+  <rect width="1200" height="900" fill="url(#dots)"/>
+
+  <!-- Large phone mockup -->
+  <g filter="url(#phone-shadow2)">
+    <rect x="408" y="68" width="384" height="764" rx="42" fill="#1a1a2e" stroke="#c0c8d4" stroke-width="1"/>
+    <rect x="422" y="96" width="356" height="710" rx="10" fill="#ffffff"/>
+    <g clip-path="url(#phoneClip)">
+      <!-- Status bar (light) -->
+      <rect x="422" y="96" width="356" height="44" fill="#003169"/>
+      <text x="446" y="124" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#ffffff" font-weight="600">9:41</text>
+      <rect x="730" y="114" width="22" height="10" rx="2" fill="none" stroke="#ffffff" stroke-width="1.2"/>
+      <rect x="732" y="116" width="16" height="6" rx="1" fill="#ffffff" opacity="0.8"/>
+      <!-- App header -->
+      <rect x="422" y="140" width="356" height="64" fill="#003169"/>
+      <text x="600" y="180" font-family="Georgia,serif" font-size="20" fill="#ffffff" font-weight="400" text-anchor="middle" letter-spacing="1">T. Rowe Price</text>
+      <!-- Greeting -->
+      <rect x="422" y="204" width="356" height="100" fill="#ffffff"/>
+      <text x="446" y="236" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#6b7c93">Good morning,</text>
+      <text x="446" y="262" font-family="Georgia,serif" font-size="24" fill="#003169" font-weight="400">Welcome back.</text>
+      <text x="446" y="288" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#8a97a8">Last updated: Mar 11, 2026 9:30 AM ET</text>
+      <!-- Total value card -->
+      <rect x="442" y="310" width="316" height="140" rx="16" fill="#003169" filter="url(#card-shadow)"/>
+      <text x="466" y="340" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="rgba(255,255,255,0.6)" font-weight="500" letter-spacing="0.5">TOTAL PORTFOLIO VALUE</text>
+      <text x="466" y="380" font-family="system-ui,-apple-system,sans-serif" font-size="36" fill="#ffffff" font-weight="700">$284,692</text>
+      <rect x="466" y="396" width="80" height="24" rx="12" fill="rgba(0,212,170,0.2)"/>
+      <text x="506" y="413" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#00d4aa" font-weight="600" text-anchor="middle">+1.51%</text>
+      <text x="556" y="413" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="rgba(255,255,255,0.5)">+$4,231 today</text>
+      <!-- Sparkline on card -->
+      <polyline points="466,435 490,430 510,432 530,425 555,418 580,420 610,412 640,408 670,410 700,402 730,398 740,395" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-linecap="round"/>
+      <!-- Quick actions -->
+      <g transform="translate(442,468)">
+        <rect x="0" y="0" width="100" height="80" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
+        <circle cx="50" cy="30" r="16" fill="#f0f4f8"/>
+        <text x="50" y="35" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#003169" text-anchor="middle">$</text>
+        <text x="50" y="62" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#003169" text-anchor="middle" font-weight="500">Invest</text>
+        <rect x="108" y="0" width="100" height="80" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
+        <circle cx="158" cy="30" r="16" fill="#f0f4f8"/>
+        <text x="158" y="35" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#003169" text-anchor="middle">&#8644;</text>
+        <text x="158" y="62" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#003169" text-anchor="middle" font-weight="500">Transfer</text>
+        <rect x="216" y="0" width="100" height="80" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
+        <circle cx="266" cy="30" r="16" fill="#f0f4f8"/>
+        <text x="266" y="35" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#003169" text-anchor="middle">&#9776;</text>
+        <text x="266" y="62" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#003169" text-anchor="middle" font-weight="500">Plan</text>
+      </g>
+      <!-- Accounts section -->
+      <text x="446" y="582" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#8a97a8" font-weight="600" letter-spacing="0.5">YOUR ACCOUNTS</text>
+      <!-- Account card 1 -->
+      <rect x="442" y="596" width="316" height="72" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
+      <circle cx="470" cy="632" r="16" fill="#e8f0fe"/>
+      <text x="470" y="637" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#003169" text-anchor="middle" font-weight="700">IRA</text>
+      <text x="496" y="622" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1a2b42" font-weight="600">Roth IRA</text>
+      <text x="496" y="642" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#8a97a8">3 funds</text>
+      <text x="738" y="622" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#1a2b42" font-weight="600" text-anchor="end">$142,388</text>
+      <text x="738" y="642" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#00b894" text-anchor="end" font-weight="500">+1.84%</text>
+      <!-- Account card 2 -->
+      <rect x="442" y="676" width="316" height="72" rx="12" fill="#ffffff" filter="url(#card-shadow)"/>
+      <circle cx="470" cy="712" r="16" fill="#e8f0fe"/>
+      <text x="470" y="717" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#003169" text-anchor="middle" font-weight="700">401k</text>
+      <text x="496" y="702" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1a2b42" font-weight="600">401(k) Plan</text>
+      <text x="496" y="722" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#8a97a8">4 funds</text>
+      <text x="738" y="702" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#1a2b42" font-weight="600" text-anchor="end">$142,304</text>
+      <text x="738" y="722" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#00b894" text-anchor="end" font-weight="500">+1.19%</text>
+      <!-- Bottom tab bar -->
+      <rect x="422" y="756" width="356" height="50" fill="#ffffff"/>
+      <line x1="422" y1="756" x2="778" y2="756" stroke="#e0e6ed" stroke-width="0.5"/>
+      <g transform="translate(422,762)">
+        <text x="44" y="22" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#003169" text-anchor="middle" font-weight="600">Home</text>
+        <rect x="31" y="28" width="26" height="2.5" rx="1.25" fill="#003169"/>
+        <text x="134" y="22" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#8a97a8" text-anchor="middle">Accounts</text>
+        <text x="222" y="22" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#8a97a8" text-anchor="middle">Plan</text>
+        <text x="312" y="22" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#8a97a8" text-anchor="middle">More</text>
+      </g>
+    </g>
+    <!-- Notch -->
+    <rect x="548" y="68" width="104" height="28" rx="14" fill="#1a1a2e"/>
+  </g>
+
+  <!-- Floating annotation cards -->
+  <g filter="url(#card-shadow)" transform="translate(48,220)">
+    <rect x="0" y="0" width="280" height="88" rx="14" fill="#ffffff"/>
+    <circle cx="28" cy="28" r="14" fill="#e8f4f0"/>
+    <text x="28" y="33" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#00b894" text-anchor="middle">&#10003;</text>
+    <text x="52" y="28" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1a2b42" font-weight="600">Personalized dashboard</text>
+    <text x="16" y="52" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#6b7c93" xml:space="preserve">Context-aware greeting and real-time</text>
+    <text x="16" y="68" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#6b7c93">portfolio summary at a glance.</text>
+  </g>
+
+  <g filter="url(#card-shadow)" transform="translate(48,460)">
+    <rect x="0" y="0" width="280" height="88" rx="14" fill="#ffffff"/>
+    <circle cx="28" cy="28" r="14" fill="#e8f0fe"/>
+    <text x="28" y="33" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#003169" text-anchor="middle">&#9673;</text>
+    <text x="52" y="28" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1a2b42" font-weight="600">Quick actions</text>
+    <text x="16" y="52" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#6b7c93" xml:space="preserve">One-tap access to invest, transfer,</text>
+    <text x="16" y="68" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#6b7c93">and plan — no hunting through menus.</text>
+  </g>
+
+  <g filter="url(#card-shadow)" transform="translate(872,320)">
+    <rect x="0" y="0" width="280" height="88" rx="14" fill="#ffffff"/>
+    <circle cx="28" cy="28" r="14" fill="#fff4e6"/>
+    <text x="28" y="33" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#ff9500" text-anchor="middle">&#9733;</text>
+    <text x="52" y="28" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1a2b42" font-weight="600">Glanceable performance</text>
+    <text x="16" y="52" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#6b7c93" xml:space="preserve">Inline sparklines and color-coded</text>
+    <text x="16" y="68" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#6b7c93">gains reduce cognitive load.</text>
+  </g>
+
+  <g filter="url(#card-shadow)" transform="translate(872,540)">
+    <rect x="0" y="0" width="280" height="88" rx="14" fill="#ffffff"/>
+    <circle cx="28" cy="28" r="14" fill="#f0e8fe"/>
+    <text x="28" y="33" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#8b5cf6" text-anchor="middle">&#9634;</text>
+    <text x="52" y="28" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#1a2b42" font-weight="600">Account hierarchy</text>
+    <text x="16" y="52" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#6b7c93" xml:space="preserve">Clear visual grouping by account</text>
+    <text x="16" y="68" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#6b7c93">type with progressive disclosure.</text>
+  </g>
+</svg>

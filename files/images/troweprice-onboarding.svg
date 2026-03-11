@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="800" viewBox="0 0 1400 800">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fafbfe"/>
+      <stop offset="100%" stop-color="#f0f3fa"/>
+    </linearGradient>
+    <filter id="ps5" x="-6%" y="-3%" width="112%" height="110%">
+      <feDropShadow dx="0" dy="12" stdDeviation="24" flood-color="#0a2540" flood-opacity="0.12"/>
+    </filter>
+    <clipPath id="o1"><rect x="102" y="76" width="280" height="606" rx="8"/></clipPath>
+    <clipPath id="o2"><rect x="490" y="76" width="280" height="606" rx="8"/></clipPath>
+    <clipPath id="o3"><rect x="878" y="76" width="280" height="606" rx="8"/></clipPath>
+  </defs>
+
+  <rect width="1400" height="800" fill="url(#bg5)"/>
+
+  <!-- Title row -->
+  <text x="700" y="750" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#8a97a8" text-anchor="middle" letter-spacing="2" font-weight="500">ONBOARDING FLOW</text>
+  <text x="700" y="785" font-family="Georgia,serif" font-size="20" fill="#003169" text-anchor="middle">Guided setup that builds confidence from the first tap</text>
+
+  <!-- Arrow connectors -->
+  <line x1="396" y1="390" x2="476" y2="390" stroke="#003169" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.2"/>
+  <polygon points="476,385 486,390 476,395" fill="#003169" opacity="0.2"/>
+  <line x1="784" y1="390" x2="864" y2="390" stroke="#003169" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.2"/>
+  <polygon points="864,385 874,390 864,395" fill="#003169" opacity="0.2"/>
+
+  <!-- Phone 1: Welcome -->
+  <g filter="url(#ps5)">
+    <rect x="90" y="50" width="304" height="656" rx="36" fill="#1c1c2e" stroke="#c8d0da" stroke-width="0.5"/>
+    <rect x="102" y="76" width="280" height="606" rx="8" fill="#ffffff"/>
+    <g clip-path="url(#o1)">
+      <rect x="102" y="76" width="280" height="42" fill="#ffffff"/>
+      <text x="122" y="102" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1a2b42" font-weight="500">9:41</text>
+      <!-- Centered content -->
+      <rect x="102" y="118" width="280" height="400" fill="#ffffff"/>
+      <!-- Logo area -->
+      <rect x="202" y="190" width="80" height="80" rx="20" fill="#003169"/>
+      <text x="242" y="220" font-family="Georgia,serif" font-size="14" fill="#ffffff" text-anchor="middle">T. Rowe</text>
+      <text x="242" y="240" font-family="Georgia,serif" font-size="14" fill="#ffffff" text-anchor="middle">Price</text>
+      <text x="242" y="310" font-family="Georgia,serif" font-size="26" fill="#003169" text-anchor="middle" font-weight="400">Invest with</text>
+      <text x="242" y="342" font-family="Georgia,serif" font-size="26" fill="#003169" text-anchor="middle" font-weight="400">confidence.</text>
+      <text x="242" y="380" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#6b7c93" text-anchor="middle">Your financial future,</text>
+      <text x="242" y="398" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#6b7c93" text-anchor="middle">simplified.</text>
+      <!-- Buttons -->
+      <rect x="132" y="460" width="220" height="48" rx="24" fill="#003169"/>
+      <text x="242" y="490" font-family="system-ui,-apple-system,sans-serif" font-size="15" fill="#ffffff" font-weight="600" text-anchor="middle">Get Started</text>
+      <rect x="132" y="520" width="220" height="48" rx="24" fill="#ffffff" stroke="#003169" stroke-width="1.5"/>
+      <text x="242" y="550" font-family="system-ui,-apple-system,sans-serif" font-size="15" fill="#003169" font-weight="600" text-anchor="middle">Sign In</text>
+      <!-- Page dots -->
+      <circle cx="224" cy="600" r="4" fill="#003169"/>
+      <circle cx="242" cy="600" r="4" fill="#d0d8e4"/>
+      <circle cx="260" cy="600" r="4" fill="#d0d8e4"/>
+      <!-- Step label -->
+      <text x="242" y="636" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#8a97a8" text-anchor="middle">Step 1 of 3</text>
+    </g>
+    <rect x="208" y="50" width="68" height="24" rx="12" fill="#1c1c2e"/>
+  </g>
+
+  <!-- Phone 2: Goals -->
+  <g filter="url(#ps5)">
+    <rect x="478" y="50" width="304" height="656" rx="36" fill="#1c1c2e" stroke="#c8d0da" stroke-width="0.5"/>
+    <rect x="490" y="76" width="280" height="606" rx="8" fill="#ffffff"/>
+    <g clip-path="url(#o2)">
+      <rect x="490" y="76" width="280" height="42" fill="#ffffff"/>
+      <text x="510" y="102" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1a2b42" font-weight="500">9:41</text>
+      <!-- Header -->
+      <text x="630" y="150" font-family="Georgia,serif" font-size="22" fill="#003169" text-anchor="middle" font-weight="400">What's your goal?</text>
+      <text x="630" y="174" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#6b7c93" text-anchor="middle">Choose what matters most to you.</text>
+      <!-- Goal cards -->
+      <rect x="510" y="200" width="240" height="72" rx="14" fill="#ffffff" stroke="#003169" stroke-width="2"/>
+      <circle cx="540" cy="236" r="18" fill="#e8f0fe"/>
+      <text x="540" y="241" font-family="system-ui,-apple-system,sans-serif" font-size="16" fill="#003169" text-anchor="middle">&#9678;</text>
+      <text x="568" y="228" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#003169" font-weight="600">Retirement</text>
+      <text x="568" y="248" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#6b7c93">Build long-term wealth</text>
+      <circle cx="726" cy="236" r="10" fill="#003169"/>
+      <text x="726" y="240" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">&#10003;</text>
+
+      <rect x="510" y="284" width="240" height="72" rx="14" fill="#ffffff" stroke="#e0e6ed" stroke-width="1.5"/>
+      <circle cx="540" cy="320" r="18" fill="#f0f4f8"/>
+      <text x="540" y="325" font-family="system-ui,-apple-system,sans-serif" font-size="16" fill="#6b7c93" text-anchor="middle">&#9733;</text>
+      <text x="568" y="312" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#1a2b42" font-weight="600">Growth</text>
+      <text x="568" y="332" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#6b7c93">Grow savings faster</text>
+
+      <rect x="510" y="368" width="240" height="72" rx="14" fill="#ffffff" stroke="#e0e6ed" stroke-width="1.5"/>
+      <circle cx="540" cy="404" r="18" fill="#f0f4f8"/>
+      <text x="540" y="409" font-family="system-ui,-apple-system,sans-serif" font-size="16" fill="#6b7c93" text-anchor="middle">$</text>
+      <text x="568" y="396" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#1a2b42" font-weight="600">Income</text>
+      <text x="568" y="416" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#6b7c93">Generate steady income</text>
+
+      <rect x="510" y="452" width="240" height="72" rx="14" fill="#ffffff" stroke="#e0e6ed" stroke-width="1.5"/>
+      <circle cx="540" cy="488" r="18" fill="#f0f4f8"/>
+      <text x="540" y="493" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#6b7c93" text-anchor="middle">&#8644;</text>
+      <text x="568" y="480" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#1a2b42" font-weight="600">General investing</text>
+      <text x="568" y="500" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#6b7c93">Flexible portfolio</text>
+
+      <!-- Continue button -->
+      <rect x="510" y="560" width="240" height="48" rx="24" fill="#003169"/>
+      <text x="630" y="590" font-family="system-ui,-apple-system,sans-serif" font-size="15" fill="#ffffff" font-weight="600" text-anchor="middle">Continue</text>
+      <!-- Dots -->
+      <circle cx="612" cy="636" r="4" fill="#d0d8e4"/>
+      <circle cx="630" cy="636" r="4" fill="#003169"/>
+      <circle cx="648" cy="636" r="4" fill="#d0d8e4"/>
+      <text x="630" y="664" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#8a97a8" text-anchor="middle">Step 2 of 3</text>
+    </g>
+    <rect x="596" y="50" width="68" height="24" rx="12" fill="#1c1c2e"/>
+  </g>
+
+  <!-- Phone 3: Risk profile -->
+  <g filter="url(#ps5)">
+    <rect x="866" y="50" width="304" height="656" rx="36" fill="#1c1c2e" stroke="#c8d0da" stroke-width="0.5"/>
+    <rect x="878" y="76" width="280" height="606" rx="8" fill="#ffffff"/>
+    <g clip-path="url(#o3)">
+      <rect x="878" y="76" width="280" height="42" fill="#ffffff"/>
+      <text x="898" y="102" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#1a2b42" font-weight="500">9:41</text>
+      <!-- Header -->
+      <text x="1018" y="150" font-family="Georgia,serif" font-size="22" fill="#003169" text-anchor="middle" font-weight="400">Your risk profile</text>
+      <text x="1018" y="174" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#6b7c93" text-anchor="middle">Based on your answers, we recommend:</text>
+
+      <!-- Risk meter -->
+      <g transform="translate(1018,280)">
+        <circle cx="0" cy="0" r="72" fill="none" stroke="#f0f4f8" stroke-width="10"/>
+        <circle cx="0" cy="0" r="72" fill="none" stroke="#003169" stroke-width="10" stroke-dasharray="320 452" stroke-linecap="round" transform="rotate(-90)"/>
+        <text x="0" y="-8" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#003169" text-anchor="middle" font-weight="600">Moderately</text>
+        <text x="0" y="12" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#003169" text-anchor="middle" font-weight="600">Aggressive</text>
+      </g>
+
+      <!-- Spectrum bar -->
+      <g transform="translate(910,380)">
+        <rect x="0" y="0" width="216" height="8" rx="4" fill="#f0f4f8"/>
+        <rect x="0" y="0" width="43" height="8" rx="4" fill="#00b894"/>
+        <rect x="43" y="0" width="43" height="8" fill="#4da3ff"/>
+        <rect x="86" y="0" width="44" height="8" fill="#003169"/>
+        <rect x="130" y="0" width="43" height="8" fill="#ff9500"/>
+        <rect x="173" y="0" width="43" height="8" rx="4" fill="#e74c3c"/>
+        <!-- Indicator -->
+        <polygon points="126,14 132,22 120,22" fill="#003169"/>
+        <text x="0" y="40" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="#8a97a8">Conservative</text>
+        <text x="216" y="40" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="#8a97a8" text-anchor="end">Aggressive</text>
+      </g>
+
+      <!-- Recommended allocation -->
+      <text x="910" y="450" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#8a97a8" font-weight="600" letter-spacing="0.5">RECOMMENDED MIX</text>
+      <rect x="910" y="462" width="216" height="36" rx="8" fill="#f7f9fc"/>
+      <rect x="910" y="462" width="130" height="36" rx="8" fill="#003169"/>
+      <text x="975" y="484" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="500">Stocks 60%</text>
+      <rect x="1040" y="462" width="54" height="36" fill="#4da3ff"/>
+      <text x="1067" y="484" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="500">25%</text>
+      <rect x="1094" y="462" width="32" height="36" rx="8" fill="#00b894"/>
+      <text x="1110" y="484" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="500">15%</text>
+
+      <text x="910" y="520" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#6b7c93">60% Stocks &bull; 25% Bonds &bull; 15% Cash</text>
+
+      <!-- CTA -->
+      <rect x="898" y="556" width="240" height="48" rx="24" fill="#003169"/>
+      <text x="1018" y="586" font-family="system-ui,-apple-system,sans-serif" font-size="15" fill="#ffffff" font-weight="600" text-anchor="middle">Build My Portfolio</text>
+      <rect x="898" y="616" width="240" height="32" rx="16" fill="transparent"/>
+      <text x="1018" y="637" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#003169" text-anchor="middle" font-weight="500">Customize allocation</text>
+      <!-- Dots -->
+      <circle cx="1000" cy="668" r="4" fill="#d0d8e4"/>
+      <circle cx="1018" cy="668" r="4" fill="#d0d8e4"/>
+      <circle cx="1036" cy="668" r="4" fill="#003169"/>
+    </g>
+    <rect x="984" y="50" width="68" height="24" rx="12" fill="#1c1c2e"/>
+  </g>
+
+  <!-- Step labels -->
+  <text x="242" y="40" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#003169" text-anchor="middle" font-weight="600">WELCOME</text>
+  <text x="630" y="40" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#003169" text-anchor="middle" font-weight="600">GOALS</text>
+  <text x="1018" y="40" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#003169" text-anchor="middle" font-weight="600">RISK PROFILE</text>
+</svg>
