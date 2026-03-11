@@ -321,14 +321,14 @@ button, input, textarea, select { font: inherit; }
     height: 300px;
     border-radius: 50%;
     background: conic-gradient(from 210deg,
-        rgba(255, 77, 109, 0.2) 0deg,
-        rgba(255, 138, 0, 0.18) 56deg,
-        rgba(255, 212, 0, 0.14) 112deg,
-        rgba(87, 209, 100, 0.18) 168deg,
-        rgba(40, 199, 217, 0.18) 224deg,
+        rgba(135, 219, 219, 0.24) 0deg,
+        rgba(135, 219, 148, 0.2) 55deg,
+        rgba(182, 236, 236, 0.18) 112deg,
+        rgba(135, 219, 219, 0.22) 168deg,
+        rgba(40, 199, 217, 0.22) 224deg,
         rgba(79, 107, 255, 0.16) 288deg,
-        rgba(217, 70, 239, 0.18) 340deg,
-        rgba(255, 77, 109, 0.2) 360deg
+        rgba(238, 249, 249, 0.2) 340deg,
+        rgba(135, 219, 219, 0.24) 360deg
     );
     filter: blur(58px);
     opacity: 0.7;
@@ -359,9 +359,9 @@ button, input, textarea, select { font: inherit; }
     position: absolute; top: 0; left: 0;
     width: 10rem; height: 10rem; border-radius: 9999px;
     background: conic-gradient(from 210deg,
-        #ff4d6d 0deg, #ff8a00 30deg, #ffd400 55deg,
-        #57d164 85deg, #28c7d9 170deg, #4f6bff 280deg,
-        #d946ef 330deg, #ff4d6d 360deg
+        #87DBDB 0deg, #87DB94 30deg, #87DBDB 55deg,
+        #B6ECEC 85deg, #28c7d9 170deg, #4f6bff 280deg,
+        #EEF9F9 330deg, #87DBDB 360deg
     );
     mix-blend-mode: color;
     filter: blur(48px) saturate(1.02);
