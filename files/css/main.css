@@ -1055,9 +1055,9 @@ a:hover .view-arrow { gap: 11px; }
 }
 .home-about-grid {
     display: grid;
-    grid-template-columns: 0.45fr 0.55fr;
+    grid-template-columns: 0.38fr 0.62fr;
     gap: 56px;
-    align-items: center;
+    align-items: stretch;
 }
 .home-about-portrait {
     display: flex;
@@ -1067,7 +1067,6 @@ a:hover .view-arrow { gap: 11px; }
     position: relative;
     overflow: hidden;
     border-radius: 28px;
-    max-width: 440px;
     width: 100%;
     box-shadow: var(--shadow);
 }
@@ -1086,7 +1085,7 @@ a:hover .view-arrow { gap: 11px; }
 }
 .home-about-frame img {
     width: 100%;
-    aspect-ratio: 0.78;
+    height: 100%;
     object-fit: cover;
     object-position: center 15%;
     display: block;
@@ -1251,17 +1250,17 @@ a:hover .view-arrow { gap: 11px; }
 
 /* Home About – Tablet */
 @media (max-width: 1024px) {
-    .home-about-grid { grid-template-columns: 1fr; gap: 36px; }
+    .home-about-grid { grid-template-columns: 1fr; gap: 36px; align-items: center; }
     .home-about-portrait { justify-content: flex-start; }
-    .home-about-frame { max-width: 360px; }
+    .home-about-frame { max-width: 320px; }
 }
 
 /* Home About – Mobile */
 @media (max-width: 760px) {
     .home-about { padding: 56px 0; }
     .home-about-grid { gap: 28px; }
-    .home-about-frame { border-radius: 20px; max-width: none; }
-    .home-about-frame img { aspect-ratio: 1.1; object-position: center 20%; }
+    .home-about-frame { border-radius: 20px; max-width: 280px; }
+    .home-about-frame img { aspect-ratio: 3 / 4; height: auto; object-position: center 20%; }
     .home-about-copy h2 { max-width: none; }
     .section-label { font-size: 0.72rem; margin-bottom: 14px; }
     .label-line { width: 24px; }
