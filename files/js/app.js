@@ -374,6 +374,48 @@ var DalitSite = window.DalitSite || {};
         });
     }
 
+    /* ── Coming Soon modal ── */
+    function initComingSoon() {
+        // Build overlay + modal once
+        var overlay = document.createElement('div');
+        overlay.className = 'coming-soon-overlay';
+        overlay.innerHTML =
+            '<div class="coming-soon-modal">' +
+                '<div class="coming-soon-modal__icon">' +
+                    '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>' +
+                '</div>' +
+                '<p class="coming-soon-modal__title">Coming soon</p>' +
+                '<p class="coming-soon-modal__text">This case study is on its way. Check back shortly.</p>' +
+                '<button class="coming-soon-modal__close">Got it</button>' +
+            '</div>';
+        document.body.appendChild(overlay);
+
+        var modal = overlay.querySelector('.coming-soon-modal');
+
+        function close() {
+            overlay.classList.remove('is-visible');
+            if (lenis) lenis.start();
+        }
+
+        overlay.addEventListener('click', function (e) {
+            if (!modal.contains(e.target)) close();
+        });
+        overlay.querySelector('.coming-soon-modal__close').addEventListener('click', close);
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && overlay.classList.contains('is-visible')) close();
+        });
+
+        // Intercept clicks on [data-coming-soon] links
+        document.addEventListener('click', function (e) {
+            var link = e.target.closest('[data-coming-soon]');
+            if (!link) return;
+            e.preventDefault();
+            e.stopPropagation();
+            overlay.classList.add('is-visible');
+            if (lenis) lenis.stop();
+        }, true);
+    }
+
     /* ── Main init ── */
     function initModules() {
         setYear();
@@ -382,6 +424,7 @@ var DalitSite = window.DalitSite || {};
         initCaseMobileNav();
         initPortraitGradient();
         initBackToTop();
+        initComingSoon();
 
         // Init modules in order
         if (DS.Animations && DS.Animations.init) DS.Animations.init();
