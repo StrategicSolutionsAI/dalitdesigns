@@ -1,0 +1,17 @@
+<svg width="900" height="900" viewBox="0 0 900 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="900" fill="#FBF7F2"/>
+  <rect x="70" y="70" width="760" height="760" rx="36" fill="#FFFDFB" stroke="#E2D3C4" stroke-width="4"/>
+  <rect x="120" y="120" width="180" height="22" rx="11" fill="#5C4A3F"/>
+  <rect x="120" y="165" width="120" height="36" rx="18" fill="#D96C3D" fill-opacity="0.18"/>
+  <rect x="255" y="165" width="120" height="36" rx="18" fill="#7FA37A" fill-opacity="0.18"/>
+  <rect x="390" y="165" width="120" height="36" rx="18" fill="#E6C39B"/>
+  <g>
+    <rect x="120" y="240" width="200" height="230" rx="24" fill="#F3E7DB"/>
+    <rect x="350" y="240" width="200" height="230" rx="24" fill="#F3E7DB"/>
+    <rect x="580" y="240" width="200" height="230" rx="24" fill="#F3E7DB"/>
+    <rect x="120" y="500" width="200" height="230" rx="24" fill="#F3E7DB"/>
+    <rect x="350" y="500" width="200" height="230" rx="24" fill="#F3E7DB"/>
+    <rect x="580" y="500" width="200" height="230" rx="24" fill="#F3E7DB"/>
+  </g>
+  <text x="120" y="52" fill="#5C4A3F" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700">Menu Grid</text>
+</svg>
